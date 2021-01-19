@@ -2,7 +2,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 import datetime
 
-def current_datetime(request):
+def index(request):
     now = datetime.datetime.now()
-    html = "<html><body>It is now %s.</body></html>" % now
-    return HttpResponse(html)
+    year = now.strftime("%Y")
+    title_name = 'Python & Django'
+    return render(request, 'pages/base.html',{
+        'date': now,
+        'year': year,
+        'title_name': title_name,
+    })

@@ -12,4 +12,4 @@ before_script:
   - poetry install -vv
 test:
   script:
-    - poetry run py.test -vvxra --tb=short --cov=myproject --cov-report=term-missing tests
+    - poetry run py.test -vvxra --tb=short --cov=website_app --cov-report=term-missing tests
