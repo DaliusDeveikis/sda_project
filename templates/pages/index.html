@@ -1,4 +1,9 @@
 {% extends 'pages/base.html' %}
 {% block content %}
-    <h1> Sveiki </h1>
+    {% if user.is_authenticated %}
+    <h1> Sveiki {{ user.username }} </h1>
+        <h4> email: {{ user.email }}</h4>
+    {% else %}
+    <h2> Home </h2>
+    {% endif %}
 {% endblock %}
