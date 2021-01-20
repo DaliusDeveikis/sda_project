@@ -42,3 +42,6 @@ def logout_user(request):
     logout(request)
     messages.error(request, ('You have Been Logged Out..'))
     return redirect('home')
+
+def edit_profile(request):
+    pass
